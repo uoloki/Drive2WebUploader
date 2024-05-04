@@ -30,6 +30,8 @@ venv/
 *.pyc
 *.sql
 *.sqlite
+*.json
+*.txt
 
 # OS generated files #
 ######################
