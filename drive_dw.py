@@ -68,9 +68,9 @@ class DriveFuncs:
         """
         Creating a list of files from the chosen drive folder
         """
-        logging.info("Listing MP4 files in folder: %s", folder_id)
+        logging.info("Listing PNG files in folder: %s", folder_id)
         service = build("drive", "v3", credentials=self.creds)
-        query = f"'{folder_id}' in parents and mimeType = 'video/mp4'"
+        query = f"'{folder_id}' in parents and mimeType = 'image/png'"
         files = []
         page_token = None
         while True:
@@ -93,10 +93,10 @@ class DriveFuncs:
 
     def download_file(self, file_id, file_name):
         """
-        Downloading the created list of files, skipping all non-mp4 files
+        Downloading the created list of files, skipping all non-png files
         """
-        if not file_name.lower().endswith('.mp4'):
-            logging.warning("Skipped non-MP4 file: %s", file_name)
+        if not file_name.lower().endswith('.png'):
+            logging.warning("Skipped non-PNG file: %s", file_name)
             return
         logging.info("Starting download for %s", file_name)
         service = build("drive", "v3", credentials=self.creds)
