@@ -53,6 +53,4 @@ Thumbs.db
 # Environment files #
 #####################
 .env
-credentials.json
-token.json
 __pycache__/
