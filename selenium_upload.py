@@ -104,5 +104,5 @@ def upload_files(credentials_path):
 
 
 if __name__ == "__main__" :
-    upload_files('C:/passwords/cpa.credentials.txt')
+    upload_files('C:/your_path_to_credentials/credentials.txt')
 
