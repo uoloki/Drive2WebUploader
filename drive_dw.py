@@ -152,7 +152,7 @@ class DriveFuncs:
 if __name__ == '__main__':
     drive_funcs = DriveFuncs()
     drive_funcs.authorization_drive()
-    FOLDER_ID_FIN = "1DiH7JzF8v7YyKbiPngcN7qOfoyz70lG8"  # Replace with your specific folder ID
+    FOLDER_ID_FIN = "##############################"  # Replace with your specific folder ID
     files_to_dw = drive_funcs.list_files_drive(FOLDER_ID_FIN)
     for file_t in files_to_dw:
         drive_funcs.download_file(file_t['id'], file_t['name'])
